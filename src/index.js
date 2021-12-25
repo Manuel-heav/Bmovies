@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import App from './App';
+import Kids from './components/Kids';
+import Theatre from "./components/Theatre"
+import Rrated from "./components/Rrated"
+import Drama from "./components/Dramas"
+import NoPage from "./components/NoPage"
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+  <Routes>
+    <Route path="/" element={<App />}/>
+    <Route path="/kids" element={<Kids />}/>
+    <Route path="/theatre" element={<Theatre />}/>
+    <Route path="/rrated" element={<Rrated />}/>
+    <Route path="/dramas" element={<Drama />}/>
+    <Route path="*" element={<NoPage />}/>
+  </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

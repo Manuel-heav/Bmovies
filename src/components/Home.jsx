@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import Movie from './Movie'
 import './home.css'
+import Header from "./Header";
+
 const Home = () => {
     const [movies, setMovies] = useState([]);
     const api_key = "api_key=9f02a73a699c175c26914cfc4ef6968e"
@@ -15,11 +17,14 @@ const Home = () => {
     console.log(movies)
     return (
         <div className="home">
+            <Header/>
+            <div className="home__movie__container">
             {
                 movies.map((movie) => (
                     <Movie desc={movie.overview} title={movie.original_title} imgUrl={base_img_url+movie.poster_path}/>         
       ))
      }
+     </div>
         </div>
     )
 }

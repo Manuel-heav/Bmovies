@@ -1,10 +1,10 @@
-.home{
+.home__movie__container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
 @media screen and (max-width: 768px){
-    .home{
+    .home__movie__container{
         grid-template-columns: 1fr 1fr;
     }
 }

@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {Link, Outlet} from 'react-router-dom'
 import './header.css'
 import { FiMenu, FiX } from 'react-icons/fi';
 const Header = () => {
@@ -15,19 +16,19 @@ const Header = () => {
             <div className="header__nav__container">
                 <ul className="header__nav__lists">
                   <li className="header__nav__list">
-                    Popular
+                    <Link to="/">Home</Link>
                   </li>
                   <li className="header__nav__list">
-                    Dramas
+                    <Link to="/dramas">Dramas</Link>
                   </li>
                   <li className="header__nav__list">
-                    Kids
+                    <Link to="/kids">Kids</Link>
                   </li>
                   <li className="header__nav__list">
-                    Theatre
+                  <Link to="/theatre">Theatre</Link>
                   </li>
                   <li className="header__nav__list">
-                    R-rated
+                  <Link to="/rrated">R-Rated</Link>
                   </li>
                 </ul>
             </div>
@@ -51,6 +52,8 @@ const Header = () => {
                   </li>
                 </ul>
             </div>}
+
+            <Outlet />
         </div>
     )
 }
