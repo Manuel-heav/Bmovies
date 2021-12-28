@@ -20,7 +20,16 @@ const Dramas = () => {
             <div className="home__movie__container">
             {
                 movies.map((movie) => (
-                    <Movie desc={movie.overview} title={movie.original_title} imgUrl={base_img_url+movie.poster_path}/>         
+                    <Movie 
+                    desc={movie.overview} 
+                    title={movie.original_title} 
+                    imgUrl={base_img_url+movie.poster_path} 
+                    releaseDate={movie.release_date}
+                    adult={movie.adult}
+                    language={movie.original_language}
+                    rating={movie.vote_average}
+                    img2Url={base_img_url+movie.backdrop_path}
+                    /> 
       ))
      }
      </div>

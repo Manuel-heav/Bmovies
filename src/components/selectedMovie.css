@@ -1,0 +1,29 @@
+.container{
+    background-image: linear-gradient( 112.1deg,  rgba(32,38,57,1) 11.4%, rgba(63,76,119,1) 70.2% );
+    color: #fff;
+    height: 100vh;
+    overflow-y: scroll;
+}
+.text__container{
+    margin: 50px;
+}
+
+.container .img{
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.close__btn{
+    position: absolute;
+    top: 0; 
+    right: 0;
+    margin: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.close__btn:hover{
+    transform: scale(1.2);
+}
