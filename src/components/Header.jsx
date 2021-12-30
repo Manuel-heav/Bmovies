@@ -36,19 +36,19 @@ const Header = () => {
             {open && <div className="header__nav__container__mobile">
             <ul className="header__nav__lists__mobile">
                   <li className="header__nav__list__mobile">
-                    Popular
+                  <Link to="/">Home</Link>
                   </li>
                   <li className="header__nav__list__mobile">
-                    Dramas
+                  <Link to="/dramas">Dramas</Link>
                   </li>
                   <li className="header__nav__list__mobile">
-                    Kids
+                  <Link to="/kids">Kids</Link>
                   </li>
                   <li className="header__nav__list__mobile">
-                    Theatre
+                  <Link to="/theatre">Theatre</Link>
                   </li>
                   <li className="header__nav__list__mobile">
-                    R-rated
+                  <Link to="/rrated">R-Rated</Link>
                   </li>
                 </ul>
             </div>}

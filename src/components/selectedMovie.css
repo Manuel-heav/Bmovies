@@ -27,3 +27,19 @@
 .close__btn:hover{
     transform: scale(1.2);
 }
+.video{
+    margin-left: 50px;
+}
+
+.movie__title{
+    margin: 50px !important;
+}
+.btn{
+    color: #fff;
+}
+@media screen and (max-width: 768px){
+    .video{
+        margin-left: 0;
+        width: 100%;
+    }
+}

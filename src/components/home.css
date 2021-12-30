@@ -3,13 +3,13 @@
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 960px){
     .home__movie__container{
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media screen and (max-width: 432px){
+@media screen and (max-width: 782px){
     .home__movie__container{
       grid-template-columns: 1fr;
     }

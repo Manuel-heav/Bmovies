@@ -1,0 +1,10 @@
+.footer p, a{
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer a{
+    text-decoration: none;
+    font-weight: bold;
+}

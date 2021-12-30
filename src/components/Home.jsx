@@ -2,6 +2,7 @@ import React,{useEffect, useState} from 'react'
 import Movie from './Movie'
 import './home.css'
 import Header from "./Header";
+import Footer from "./Footer";
 
 const Home = () => {
     const [movies, setMovies] = useState([]);
@@ -15,6 +16,7 @@ const Home = () => {
       .then(data => setMovies(data.results))
     }, [API_URL])
     console.log(movies)
+
     return (
         <div className="home">
             <Header/>
@@ -34,6 +36,7 @@ const Home = () => {
       ))
      }
      </div>
+     <Footer />
         </div>
     )
 }
