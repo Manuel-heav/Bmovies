@@ -1,19 +1,14 @@
 import React, { useState } from 'react'
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
 import './movie.css'
 import SelectedMovie from './SelectedMovie';
-import { toUnitless } from '@mui/material/styles/cssUtils';
+
 const Movie = ({imgUrl, title, desc, img2Url, releaseDate, adult, language, rating}) => {
     return (
         <div className="movie">
             <figure class="snip1218">
                 <div class="image"><img src={img2Url} alt="sample70"/>
                     <p>
-                    {desc.split("").length > 180 ? desc.split("").slice(0, 180).join("")+"..." : desc}
+                    {desc?.split("").length > 180 ? desc.split("").slice(0, 180).join("")+"..." : desc}
                     </p>
                 </div>
                 <figcaption>

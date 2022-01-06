@@ -9,20 +9,29 @@ const Kids = () => {
     const base_url = "https://api.themoviedb.org/3"
     const base_img_url = "https://image.tmdb.org/t/p/w500/"
     const API_URL = base_url + "/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&"+api_key 
+    const [query, setQuery] = useState("")
+    
     useEffect(()=>{
       fetch(API_URL)
       .then(res => res.json())
       .then(data => setMovies(data.results))
     }, [API_URL])
 
+
     console.log(movies)       
 
     return ( 
         <div className="kids">
-                <Header/>
+                <Header query={query} setQuery={setQuery}/>
             <div className="home__movie__container">
             {
-                movies.map((movie) => (
+                movies.filter((movie)=> {
+                    if(query === ""){
+                        return movie
+                    }else if(movie.original_title.toLowerCase().includes(query.toLowerCase())){
+                        return movie
+                    }
+                }).map((movie) => (
                     <Movie 
                     desc={movie.overview} 
                     title={movie.original_title} 

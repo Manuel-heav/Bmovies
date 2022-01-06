@@ -37,6 +37,16 @@
 .btn{
     color: #fff;
 }
+
+.fav__btn{
+    margin-top: 20px !important;
+    background-color: #B9314F !important;
+    transition: .6s ease;
+}
+
+.fav__btn:hover{
+    transform: scale(1.05);
+}
 @media screen and (max-width: 768px){
     .video{
         margin-left: 0;
